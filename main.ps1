@@ -1,4 +1,4 @@
-[string]$table = ""
+[string]$table = ".\template.csv"
 
 [object]$csv = Import-Csv $table
 
