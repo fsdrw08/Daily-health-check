@@ -1,0 +1,5 @@
+Region,Index,Address,Way,Account,Hint,GetAccess,Remarks,Command1,Command2,Command3,Command4,Command5,Command6,Command7,Command8
+APAC,APAC1,httprequest.localdomain,HttpRequest,,<AD>,success,Health Check 1,,,,,,,,
+APAC,APAC2,192.168.1.1,ssh,,<AD>,success,Healtch check 2,"echo ""Daily health check 2, Check Memory Log""",cat /opt/log/*.log | grep type | head -3,echo Check File System,df -h | awk 'NR==1; /lv_app07/{c1=2}(c1 && c1--);/lv_app05/{c2=2}(c2 && c2--)',,,,
+APAC,APAC3,ssh.localdomain,ssh,,<Local>,success,Healtch check 3,"echo ""Daily health check 2, Check Backups""",ls /application/backups -lth | head -3,,,,,,
+APAC,APAC6,https://untrust.com,Browser,,<AD>,success,"Healtch check 4",,,,,,,,
